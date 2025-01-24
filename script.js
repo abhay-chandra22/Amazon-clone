@@ -30,3 +30,12 @@ next_but.addEventListener('click' , (e)=>{
     }
     changeSlider();
 })
+
+const scrollContainer = document.querySelectorAll(".products");
+for (const i of scrollContainer) {
+    i.addEventListener("wheel",(evt)=>{
+        evt.preventDefault();
+        i.scrollLeft += evt.deltaY;
+    })
+    
+}
